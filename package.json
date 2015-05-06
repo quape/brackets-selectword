@@ -1,0 +1,12 @@
+{
+  "name": "selectword",
+  "title":"Select Word",
+  "description": "Select the word at the current cursor postion",
+  "homepage": "https://github.com/Wikunia/brackets-toggleCase",
+  "version": "0.1.2",
+  "author": "Ole Kröger",
+  "licence": "MIT",
+  "engines": {
+    "brackets": ">=0.23.0"
+  }
+}
