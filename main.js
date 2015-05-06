@@ -56,7 +56,7 @@ define(function (require, exports, module) {
         if(focusedEditor) $(focusedEditor).on("keyEvent", keyEventHandler);
     };
     
-    var MY_COMMAND_ID = "selectword";
+    var MY_COMMAND_ID = "quape.selectword";
     CommandManager.register("Select World", MY_COMMAND_ID, handleMe);
     
 //    var menu = Menus.getMenu(Menus.AppMenuBar.FILE_MENU);
