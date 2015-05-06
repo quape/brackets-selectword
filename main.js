@@ -17,8 +17,7 @@ define(function (require, exports, module) {
         var linePartBefore 	= document.getLine(pos.line).substr(0,pos.ch);
 
         var reverse 		= reverse_str(linePartBefore);
-        var function_chars = '0123456789abcdefghijklmnopqrstuvwxyz_';
-        var noword_regex = new RegExp('[^'+function_chars+']','i');
+        var noword_regex = /[^a-z_$]/i;
         var match 		 = noword_regex.exec(reverse);
         var word_start = match ? pos.ch - match.index : 0; // 0: first word in a line
 
@@ -30,7 +29,7 @@ define(function (require, exports, module) {
     }
 
     var keyEventHandler = function ($event, editor, event) {
-        if(event.type == "keydown" && event.ctrlKey && event.keyCode == 67) { // c
+        if(event.type == "keydown" && event.ctrlKey && event.keyCode == 89) { // y
             handleMe(editor);
         }
     }

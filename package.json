@@ -1,9 +1,9 @@
 {
   "name": "quape.selectword",
   "title":"Select Word",
-  "description": "Select the word at the current cursor postion",
-  "homepage": "https://github.com/quape/brackets-selectcase",
-  "version": "1.0.0",
+  "description": "Select the word at the current cursor postion like if you double-click there.",
+  "homepage": "https://github.com/quape/brackets-selectword",
+  "version": "1.0.1",
   "author": "Matthias Kaulartz <quape@gmx.net>",
   "licence": "MIT",
   "engines": {
