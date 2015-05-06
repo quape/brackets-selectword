@@ -17,12 +17,10 @@ define(function (require, exports, module) {
         var linePartBefore 	= document.getLine(pos.line).substr(0,pos.ch);
 
         var reverse 		= reverse_str(linePartBefore);
-//			// characters which can be part of a word
         var function_chars = '0123456789abcdefghijklmnopqrstuvwxyz_';
         var noword_regex = new RegExp('[^'+function_chars+']','i');
-//			// check if there is a character which isn't part of a word
         var match 		 = noword_regex.exec(reverse);
-        var word_start = match ? pos.ch - match.index : 0; // first word in a line
+        var word_start = match ? pos.ch - match.index : 0; // 0: first word in a line
 
         var linePartAfter = document.getLine(pos.line).substr(pos.ch);
         var match_end = noword_regex.exec(linePartAfter);
@@ -32,16 +30,6 @@ define(function (require, exports, module) {
     }
 
     var keyEventHandler = function ($event, editor, event) {
-//       	var arrayKeyCodes = [KeyEvent.DOM_VK_ALT,KeyEvent.DOM_VK_SHIFT];
-//       	if (event.type == "keydown") {
-//			lastBothTrue = (event.altKey && event.shiftKey && arrayKeyCodes.indexOf(event.keyCode) >= 0) ? true : false;
-//	   	}
-		
-		
-//		var nrOfselections = editor.getSelections().length;	
-//		if (nrOfselections == 1 && lastBothTrue && (event.altKey || event.shiftKey) 
-//			&& event.type == "keyup" && arrayKeyCodes.indexOf(event.keyCode) >= 0) {
-        
         if(event.type == "keydown" && event.ctrlKey && event.keyCode == 67) { // c
             handleMe(editor);
         }
